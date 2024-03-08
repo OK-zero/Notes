@@ -1,0 +1,15 @@
+.toc-anchor {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+h1:hover .toc-anchor,
+h2:hover .toc-anchor,
+h3:hover .toc-anchor,
+h4:hover .toc-anchor,
+h5:hover .toc-anchor,
+h6:hover .toc-anchor {
+  visibility: visible;
+  opacity: 1;
+}

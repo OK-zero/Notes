@@ -1,0 +1,155 @@
+site_name: OKCzero's Notes
+
+theme:
+  name: material
+  features:
+    # Set for build-in search
+    - search.suggest
+    - search.highlight
+    - search.share
+    # Include file to nav
+    - include_dir_to_nav:
+      sort_file: true
+      sort_directory: true
+    # Set for navigation
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    # - toc.integrate
+    # Set for Code
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+  # palette:
+  #   # Palette toggle for dark mode
+  #   - scheme: slate
+  #     primary: black
+  #     toggle:
+  #       icon: material/brightness-4
+  #       name: Switch to light mode
+  #   # Palette toggle for light mode
+  #   - scheme: default
+  #     primary: white
+  #     toggle:
+  #       icon: material/brightness-7
+  #       name: Switch to auto mode
+  #   # Palette toggle for auto mode
+  #   - scheme: auto
+  #     toggle:
+  #       icon: material/brightness-auto
+  #       name: Switch to dark mode
+
+  font:
+    text: Roboto
+    code: Fira Code
+
+# nav:
+#   - 微积分:
+#       - Home: 微积分/index.md
+#       - Stolz定理: 微积分/Stolz定理.md
+#       - 级数:
+#           - Home: 微积分/级数.md
+#           - 一元函数微分学: 微积分/一元函数微分学.md
+
+#   - Home: index.md
+#   - About: about.md
+#   - Stolz定理: Stolz定理.md
+
+markdown_extensions:
+  # - Support for Markdown Syntax Extra
+  # -----------------------------------
+  # Support for markdown tables
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  # Generate permalink anchors for headings
+  - toc:
+      permalink: true
+      permalink_class: toc-anchor
+      # permalink_symbol: ¶
+
+  # Support for aligning images, adding captions to images (rendering them as figures), and marking large images for lazy-loading
+  - attr_list
+  - md_in_html
+
+  # Support for LaTeX math
+  - pymdownx.arithmatex:
+      generic: true
+  # Support for code syntax highlighting
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      use_pygments: true
+      guess_lang: true
+      auto_title: true
+      # pygments_lang_class: true
+      linenums: true
+      linenums_style: "table"
+      anchor_linenums: true
+      line_spans: __span
+
+  # Support for extra Markdown syntax
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+  # - Support for emoji
+  # -------------------
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator:
+        !!python/name:material.extensions.emoji.to_svg # Support for LaTeX math using MathJax
+
+
+extra_javascript:
+  # Support for LaTeX math using MathJax
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  # Support
+  - css/styles.css
+
+# extra:
+# disqus: true
+
+plugins:
+  # Support for build-in search
+  - search:
+      lang:
+        - en
+        - zh
+      # prebuild_index: true
+  # Support for zooming in on images
+  - glightbox
