@@ -69,13 +69,15 @@ theme:
     text: Roboto
     code: Fira Code
 
-# nav:
-#   - 微积分:
-#       - Home: 微积分/index.md
-#       - Stolz定理: 微积分/Stolz定理.md
-#       - 级数:
-#           - Home: 微积分/级数.md
-#           - 一元函数微分学: 微积分/一元函数微分学.md
+nav:
+  - Home: index.md
+  - Test: test.md
+  - 微积分:
+      - Home: 微积分/index.md
+      - 定理:
+          - 达布定理: 微积分/定理/达布定理.md
+          - 沃利斯公式: 微积分/定理/沃利斯公式.md
+    # - 级数: 微积分/级数.md
 
 #   - Home: index.md
 #   - About: about.md
