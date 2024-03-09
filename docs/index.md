@@ -1,6 +1,7 @@
 ---
 hide:
   - feedback
+comments: true
 ---
 
 # Welcome to OKCzero's Notes
