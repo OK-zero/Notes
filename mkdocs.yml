@@ -1,7 +1,12 @@
 site_name: OKCzero's Notes
 
+repo_url: https://github.com/ok-zero/Notes
+repo_name: OK-zero/Notes
+# edit_uri: edit/main/docs # edit link to the GitHub repository
+
 theme:
   name: material
+  custom_dir: overrides
   features:
     # Set for build-in search
     - search.suggest
@@ -17,11 +22,18 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.indexes
+    - navigation.top
+    # - header.autohide
     # - toc.integrate
     # Set for Code
     - content.code.copy
     - content.code.select
     - content.code.annotate
+
+  icon:
+    # logo: bootstrap/envelope-paper
+    repo: fontawesome/brands/github
+    edit: material/pencil # edit button icon
 
   palette:
     # Palette toggle for automatic mode
@@ -71,6 +83,7 @@ theme:
 
 nav:
   - Home: index.md
+  - Tags: tags.md
   - Test: test.md
   - 微积分:
       - Home: 微积分/index.md
@@ -79,11 +92,14 @@ nav:
           - 沃利斯公式: 微积分/定理/沃利斯公式.md
     # - 级数: 微积分/级数.md
 
-#   - Home: index.md
-#   - About: about.md
-#   - Stolz定理: Stolz定理.md
+copyright: Copyright &copy; 2024 OKCzero
 
 markdown_extensions:
+  - abbr
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
   # - Support for Markdown Syntax Extra
   # -----------------------------------
   # Support for markdown tables
@@ -125,13 +141,17 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
 
+  # Support for Markdown
+  - meta
+
   # - Support for emoji
   # -------------------
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator:
-        !!python/name:material.extensions.emoji.to_svg # Support for LaTeX math using MathJax
-
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
 
 extra_javascript:
   # Support for LaTeX math using MathJax
@@ -143,15 +163,65 @@ extra_css:
   # Support
   - css/styles.css
 
-# extra:
+extra:
+  # Set the language of the website
+  # alternate:
+  #   - name: English
+  #     link: /en/
+  #     lang: en
+  #   - name: Chinese
+  #     link: /zh/
+  #     lang: zh
+  # Delete 'Made with Material for MkDocs' in the footer
+  # generator: false
+  # Set website analytics
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+    provider: google
+    property: G-5HK4NWGSB9
+  # Set the contact favicon
+  social:
+    # - icon: fontawesome/brands/twitter
+    #   link: https://twitter.com/wcowin_
+    - icon: fontawesome/brands/github
+      link: https://github.com/OK-zero
+    # - icon: fontawesome/brands/bilibili
+    #   link:
+    - icon: bootstrap/envelope
+      link: mailto:<okczero@outlook.com> #联系方式
+
 # disqus: true
 
 plugins:
+  # - meta
   # Support for build-in search
   - search:
       lang:
         - en
         - zh
-      # prebuild_index: true
+      jieba_dict: dict.txt
+      separator: '[\s\u200b\-]'
   # Support for zooming in on images
   - glightbox
+
+  - tags:
+      tags_file: tags.md
+      # enabled: !ENV [CI, false]
+
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+  - blog:
+      # post_readtime: true
