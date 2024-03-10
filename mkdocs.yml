@@ -86,11 +86,12 @@ nav:
   - Tags: tags.md
   - Test: test.md
   - 微积分:
-      - Home: 微积分/index.md
+      - Home: Calculus/index.md
       - 定理:
-          - 达布定理: 微积分/定理/达布定理.md
-          - 沃利斯公式: 微积分/定理/沃利斯公式.md
-    # - 级数: 微积分/级数.md
+          - 达布定理: Calculus/theorem/达布定理.md
+          - 沃利斯公式: Calculus/theorem/沃利斯公式.md
+          - Stirling公式: Calculus/theorem/Stirling公式.md
+    # - 级数: Calculus/级数.md
 
 copyright: Copyright &copy; 2024 OKCzero
 
