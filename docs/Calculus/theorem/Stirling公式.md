@@ -14,7 +14,7 @@ $$
 
 $或$
 
-$$
+$$  
 \lim_{n \to +\infty}{\frac{e^n \cdot n!}{n^n \sqrt{n}}} = \sqrt{2\pi}
 $$
 
