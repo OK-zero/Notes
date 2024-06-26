@@ -29,11 +29,16 @@ theme:
     - content.code.copy
     - content.code.select
     - content.code.annotate
+    # Set for footnote, Insider version
+    # - content.footnote.tooltips
+    # Set for content tabs
+    - content.tabs.link
 
   icon:
     # logo: bootstrap/envelope-paper
     repo: fontawesome/brands/github
     edit: material/pencil # edit button icon
+    annotation: material/chevron-right-circle # annotate button icon
 
   palette:
     # Palette toggle for automatic mode
@@ -92,6 +97,9 @@ nav:
           - 沃利斯公式: Calculus/theorem/沃利斯公式.md
           - Stirling公式: Calculus/theorem/Stirling公式.md
     # - 级数: Calculus/级数.md
+  - Travel:
+      - Home: blog/posts/Travel/index.md
+  #     - Thailand: blog/Travel/Thailand/Phuket-Island.md
 
 copyright: Copyright &copy; 2024 OKCzero
 
@@ -107,6 +115,19 @@ markdown_extensions:
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
+
+  # enables admonitions, allows to make them collapsible and to nest arbitrary content inside admonitions
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - footnotes
 
   # Generate permalink anchors for headings
   - toc:
@@ -160,6 +181,10 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
+  # Support for table sorter
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesorter.js
+
 extra_css:
   # Support
   - css/styles.css
@@ -175,6 +200,9 @@ extra:
   #     lang: zh
   # Delete 'Made with Material for MkDocs' in the footer
   # generator: false
+
+  status:
+
   # Set website analytics
   analytics:
     feedback:
@@ -192,6 +220,7 @@ extra:
 
     provider: google
     property: G-5HK4NWGSB9
+
   # Set the contact favicon
   social:
     # - icon: fontawesome/brands/twitter
@@ -225,4 +254,9 @@ plugins:
       enable_creation_date: true
 
   - blog:
-      # post_readtime: true
+    # ? ERROR   -  Config value 'plugins': Invalid Plugins configuration
+    # blog_toc: true
+    # archive_date_format: MMMM yyyy
+    # categories_allowed:
+    # - Travel
+    # post_readtime: true
