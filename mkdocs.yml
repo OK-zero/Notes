@@ -101,6 +101,8 @@ nav:
       - Home: blog/posts/Travel/index.md
   #     - Thailand: blog/Travel/Thailand/Phuket-Island.md
 
+  - React App: app/react-app/index.md
+
 copyright: Copyright &copy; 2024 OKCzero
 
 markdown_extensions:

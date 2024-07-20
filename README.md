@@ -1,2 +1,3 @@
 # Notes
-Personal notes
+
+[Personal notes](https://ok-zero.github.io/Notes/)
