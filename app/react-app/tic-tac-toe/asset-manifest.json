@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Notes/app/react-app/tic-tac-toe/static/css/main.e3cef40a.css",
+    "main.js": "/Notes/app/react-app/tic-tac-toe/static/js/main.02ba61d9.js",
+    "static/js/453.e036e8b5.chunk.js": "/Notes/app/react-app/tic-tac-toe/static/js/453.e036e8b5.chunk.js",
+    "index.html": "/Notes/app/react-app/tic-tac-toe/index.html",
+    "main.e3cef40a.css.map": "/Notes/app/react-app/tic-tac-toe/static/css/main.e3cef40a.css.map",
+    "main.02ba61d9.js.map": "/Notes/app/react-app/tic-tac-toe/static/js/main.02ba61d9.js.map",
+    "453.e036e8b5.chunk.js.map": "/Notes/app/react-app/tic-tac-toe/static/js/453.e036e8b5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3cef40a.css",
+    "static/js/main.02ba61d9.js"
+  ]
+}
